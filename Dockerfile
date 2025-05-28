@@ -7,11 +7,11 @@ RUN apt-get update && apt-get install -y ffmpeg git && apt-get clean
 WORKDIR /app
 
 # Copiar archivos
-COPY requirements.txt app.py ./
+COPY requirements.txt voz_texto.py ./
 
 # Instalar dependencias Python
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python", "app.py"]
+CMD ["python", "voz_texto.py"]
