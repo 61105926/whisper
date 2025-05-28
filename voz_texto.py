@@ -3,7 +3,7 @@ import whisper
 import os
 
 app = Flask(__name__)
-model = whisper.load_model("small")
+model = whisper.load_model("base")
 
 UPLOAD_FOLDER = "/tmp"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
